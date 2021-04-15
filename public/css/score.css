@@ -1,0 +1,41 @@
+.scoreContainer{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+
+.nameBox{
+   margin: 0.4rem;
+   margin-left: 2rem;
+   font-size: 2rem;
+   width: 100%;
+}
+
+.scoreBox{
+   margin: 0.4rem;
+   margin-right: 2rem;
+   font-size: 2rem;
+}
+
+.pageContainer{
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+   background-color: rgb(64, 64, 64);
+}
+#scoreBoard{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 1000px;
+   width: 400px;
+   margin: 3rem;
+   background-color: white;
+}
+
+body{
+   margin: 0px;
+   padding: 0px;
+}
+
