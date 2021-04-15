@@ -12,6 +12,7 @@ app.listen(port);
 
 app.post('/api/scoreData', (req, res) => {
    console.log(req.body);
+<<<<<<< HEAD
    scores.add(req.body)
       .then(score => {
          res.status(200).json(score)
@@ -20,6 +21,17 @@ app.post('/api/scoreData', (req, res) => {
          console.log(error);
          res.status(500).json({message: "oi cunt i cant fucking underständ"})
       })
+=======
+   // scores.add(req.body)
+   //    .then(score => {
+   //       console.log(score);
+   //       res.status(200).json(score)
+   //    })
+   //    .catch(error => {
+   //       console.log(error);
+   //       res.status(500).json({message: "oi cunt i cant fucking underständ"})
+   //    })
+>>>>>>> 8c461e132ab9d31b8cccbf764ebf4a086b673304
 });
 
 app.get('/api/scoreData', (req, res) => {

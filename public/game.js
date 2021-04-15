@@ -1,6 +1,7 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+<<<<<<< HEAD
 const nameInputBox = document.getElementById('nameInputBox')
 const nameInput = document.getElementById('nameInput')
 const startButton = document.getElementById('startButton')
@@ -30,6 +31,17 @@ function start(){
 //parameters
 const player = {
     name: '',
+=======
+//waits untill enter is pressed to start, made for testing 
+window.addEventListener('keydown', (e) => {
+    if (e.keyCode == 13){
+        update();   
+    }
+});
+
+//parameters
+const player = {
+>>>>>>> 8c461e132ab9d31b8cccbf764ebf4a086b673304
     x: 300,
     y: 300,
     size: 20,
@@ -399,19 +411,32 @@ function detectPlayerEnemyColision(x1, y1, radius1, x2, y2, radius2, x3, y3, rad
 
 async function sendToServer(){
     if(!isSent && score > 0){
+<<<<<<< HEAD
         isSent = true
 
+=======
+>>>>>>> 8c461e132ab9d31b8cccbf764ebf4a086b673304
         const options = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
+<<<<<<< HEAD
             body: JSON.stringify({name: player.name, score: score  })
+=======
+            body: JSON.stringify({score: score})
+>>>>>>> 8c461e132ab9d31b8cccbf764ebf4a086b673304
         }
     
         const res = await fetch('/api/scoreData', options)
     
         const data = await res.json()
+<<<<<<< HEAD
+=======
+        console.log(data.status) 
+        isSent = true
+
+>>>>>>> 8c461e132ab9d31b8cccbf764ebf4a086b673304
     }
 }
 
